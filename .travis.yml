@@ -114,10 +114,11 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - sourceline: 'deb https://apt.kitware.com/ubuntu/ xenial main'
+            - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-xenial'
+            - sourceline: 'ppa:litenstein/sdl2-bionic
+            '
           packages:
             - gcc-8
             - cmake
@@ -144,10 +145,10 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - sourceline: 'deb https://apt.kitware.com/ubuntu/ xenial main'
+            - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-xenial'
+            - sourceline: 'ppa:litenstein/sdl2-bionic'
           packages:
             - gcc-9
             - cmake
@@ -168,11 +169,11 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-xenial-7
-            - sourceline: 'deb https://apt.kitware.com/ubuntu/ xenial main'
+            - llvm-toolchain-bionic-7
+            - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-xenial'
+            - sourceline: 'ppa:litenstein/sdl2-bionic'
           packages:
             - clang-7
             - cmake
@@ -193,11 +194,11 @@ matrix:
         apt:
           sources:
             - ubuntu-toolchain-r-test
-            - llvm-toolchain-xenial-8
-            - sourceline: 'deb https://apt.kitware.com/ubuntu/ xenial main'
+            - llvm-toolchain-bionic-8
+            - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-xenial'
+            - sourceline: 'ppa:litenstein/sdl2-bionic'
           packages:
             - clang-8
             - cmake
