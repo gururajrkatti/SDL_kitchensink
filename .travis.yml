@@ -107,7 +107,6 @@ matrix:
 
     - os: linux
       arch: ppc64le
-      dist: bionic
       addons:
         sonarcloud:
           organization: "katajakasa-github"
@@ -139,7 +138,6 @@ matrix:
         - MATRIX_EVAL="CC=gcc-8"
     - os: linux
       arch: ppc64le
-      dist: bionic
       addons:
         apt:
           sources:
@@ -163,7 +161,6 @@ matrix:
         - MATRIX_EVAL="CC=gcc-9"
     - os: linux
       arch: ppc64le
-      dist: bionic
       addons:
         apt:
           sources:
@@ -188,7 +185,6 @@ matrix:
         - MATRIX_EVAL="CC=clang-7"
     - os: linux
       arch: ppc64le
-      dist: bionic
       addons:
         apt:
           sources:
