@@ -117,8 +117,7 @@ matrix:
             - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-bionic
-            '
+            - sourceline: 'ppa:litenstein/sdl2-xenial'
           packages:
             - gcc-8
             - cmake
@@ -148,7 +147,7 @@ matrix:
             - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-bionic'
+            - sourceline: 'ppa:litenstein/sdl2-xenial'
           packages:
             - gcc-9
             - cmake
@@ -173,7 +172,7 @@ matrix:
             - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-bionic'
+            - sourceline: 'ppa:litenstein/sdl2-xenial'
           packages:
             - clang-7
             - cmake
@@ -198,7 +197,7 @@ matrix:
             - sourceline: 'deb https://apt.kitware.com/ubuntu/ bionic main'
               key_url: 'https://apt.kitware.com/keys/kitware-archive-latest.asc'
             - sourceline: 'ppa:jonathonf/ffmpeg-4'
-            - sourceline: 'ppa:litenstein/sdl2-bionic'
+            - sourceline: 'ppa:litenstein/sdl2-xenial'
           packages:
             - clang-8
             - cmake
@@ -215,6 +214,9 @@ matrix:
 
 before_install:
     - eval "${MATRIX_EVAL}"
+    - if [ "$TRAVIS_CPU_ARCH" = "ppc64le" ]; then
+       sudo snap install cmake --classic;
+      fi
 
 script:
   - cd $TRAVIS_BUILD_DIR
